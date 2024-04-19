@@ -9,10 +9,47 @@
          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700&display=swap"
          rel="stylesheet"
          />
-      <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="css/style.css" />
    </head>
    <body>
-      </main>
+ <div class="features">
+   <div class="feature">
+     <a href="#" class="feature-content">
+       <strong>Some feature</strong>
+       <span>Description of the awesome feature</span>
+     </a>
+   </div>
+   <div class="feature">
+     <a href="#" class="feature-content">
+       <strong>Some feature</strong>
+       <span>Description of the awesome feature</span>
+     </a>
+   </div>
+   <div class="feature">
+     <a href="#" class="feature-content">
+       <strong>Some feature</strong>
+       <span>Description of the awesome feature</span>
+     </a>
+   </div>
+   <div class="feature">
+     <a href="#" class="feature-content">
+       <strong>Some feature</strong>
+       <span>Description of the awesome feature</span>
+     </a>
+   </div>
+   <div class="feature">
+     <a href="#" class="feature-content">
+       <strong>Some feature</strong>
+       <span>Description of the awesome feature</span>
+     </a>
+   </div>
+   <div class="feature">
+     <a href="#" class="feature-content">
+       <strong>Some feature</strong>
+       <span>Description of the awesome feature</span>
+     </a>
+   </div>
+ </div>
       </div>
       <div class="container">
          <div class="left">
@@ -39,20 +76,20 @@
       </div>
       </div>
       <script type="text/javascript">
-         const main = document.querySelector("#main");
-         const content = main.querySelector(":scope > *");
-         const clone = content.cloneNode(true);
-         const overlay = document.querySelector(".overlay");
-         overlay.insertAdjacentElement("beforeend", clone);
-         
-         const applyOverlayMask = (e) => {
-           const overlayEl = e.currentTarget;
-           const x = e.pageX - main.offsetLeft;
-           const y = e.pageY - main.offsetTop;
-           overlayEl.style = `--opacity: 1; --x: ${x}px; --y:${y}px;`;
-         };
-         
-         document.body.addEventListener("pointermove", applyOverlayMask);
+console.clear();
+const featuresEl = document.querySelector(".features");
+const featureEls = document.querySelectorAll(".feature");
+
+featuresEl.addEventListener("pointermove", (ev) => {
+  featureEls.forEach((featureEl) => {
+    // Not optimized yet, I know
+    const rect = featureEl.getBoundingClientRect();
+
+    featureEl.style.setProperty("--x", ev.clientX - rect.left);
+    featureEl.style.setProperty("--y", ev.clientY - rect.top);
+  });
+});
+
          
          
       </script>
