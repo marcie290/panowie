@@ -79,7 +79,7 @@ body {
   position: relative;
 }
 .features {
-  width: 10rem;
+  width: 12rem;
   height: 3rem;
   display: grid;
 
@@ -107,7 +107,7 @@ body {
   inset: 0px;
   border-radius: inherit;
   background: radial-gradient(
-    180px circle at var(--x-px) var(s--y-px),
+    180px circle at var(--x-px) var(--y-px),
     rgba(255, 255, 255, 0.3),
     transparent 40%
   );
@@ -131,11 +131,10 @@ body {
   z-index: 1;
   position: absolute;
   inset: var(--border);
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-row-gap: 0.5rem;
-  padding: 0 1rem 0 2rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  font: 600 100%/1.5 "Inter", sans-serif;
 }
 .feature-content > strong {
   align-self: self-end;
