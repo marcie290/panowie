@@ -9,17 +9,22 @@ html {
 }
 
 body {
-  font: 600 100%/1.5 "Inter", sans-serif;
+  font: 600 100%/1.5 "Inter Semibold", sans-serif;
   margin: 1rem;
 }
-h1,
+
 h2 {
-  font: 600 3.25rem/0.5rem "Inter", sans-serif;
+  font: 600 3.25rem/0.5rem "Inter Semibold", sans-serif;
+}
+h1 {
+  font: 500 3.25rem/0.5rem "Inter Bold", sans-serif;
 }
 h1 {
   text-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
   display: inline-block;
-  margin-top: 10px;
+  font-size: 13rem;
+  padding: 0;
+  margin: 0;
 }
 h2 {
   font-size: 1rem;
@@ -37,23 +42,38 @@ img {
   grid-template-columns: 4fr 6fr;
   column-gap: 20px;
 
-  padding: 3rem;
+  padding: 0 3rem;
   .left {
     margin: 0 auto;
-    background-color: aqua;
     width: 100%;
-    height: 50%;
+    height: 100%;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    display: flex;
     .text {
       text-align: left;
       position: relative;
       top: 15%;
       left: 20%;
-      grid-row-start: 2;
+      grid-row-start: 1;
       h2 {
         text-align: left;
       }
+    }
+    .bottomContainer {
+      align-self: flex-end;
+      position: absolute;
+      text-shadow: none;
+      box-shadow: none;
+      left: 15%;
+      z-index: 100;
+    }
+  }
+  .right {
+    height: 70vh;
+    display: flex;
+    .fit-picture {
+      align-self: flex-end;
     }
   }
 }
@@ -80,7 +100,7 @@ body {
   width: 12rem;
   height: 3rem;
   display: grid;
-  margin-top: 1.75rem;
+  margin-top: 3rem;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
 }
