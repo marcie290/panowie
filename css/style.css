@@ -9,15 +9,14 @@ html {
 }
 
 body {
-  font: 600 100%/1.5 "Inter Semibold", sans-serif;
   margin: 1rem;
 }
 
 h2 {
-  font: 600 3.25rem/0.5rem "Inter Semibold", sans-serif;
+  font: 600 3.25rem/0.5rem "Inter", sans-serif;
 }
 h1 {
-  font: 500 3.25rem/0.5rem "Inter Bold", sans-serif;
+  font: 400 3.25rem/0 "Inter", sans-serif;
 }
 h1 {
   text-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
@@ -37,12 +36,13 @@ img {
 }
 
 /* Main Styles --------------------- */
+
 .container {
   display: grid;
   grid-template-columns: 4fr 6fr;
   column-gap: 20px;
-
   padding: 0 3rem;
+
   .left {
     margin: 0 auto;
     width: 100%;
@@ -86,7 +86,6 @@ body {
   padding: 0;
 }
 body {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -160,6 +159,14 @@ body {
 }
 .feature-content > span {
   opacity: 0.7;
+}
+.pl {
+  width: 80vw;
+  height: 70vh;
+  display: block;
+  background-color: rgb(184, 203, 203);
+  border-radius: 0.2rem;
+  margin: 6rem auto;
 }
 
 /* Media Queries ------------------- */
