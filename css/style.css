@@ -6,11 +6,13 @@
 }
 html {
   font-size: 1.25em;
+  overflow-y: auto;
 }
 
 body {
   font: 600 100%/1.5 "Inter Semibold", sans-serif;
-  margin: 1rem;
+  margin: 0rem;
+  width: 100vw;
 }
 
 h2 {
@@ -41,7 +43,7 @@ img {
   display: grid;
   grid-template-columns: 4fr 6fr;
   column-gap: 20px;
-
+  margin-top: 3rem;
   padding: 0 3rem;
   .left {
     margin: 0 auto;
